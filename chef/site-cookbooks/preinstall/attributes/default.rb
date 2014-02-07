@@ -17,4 +17,5 @@ node.default[:packages] = %w(
   ncurses-dev
   automake
   libtool
+  libsqlite3-dev
 )
