@@ -18,4 +18,5 @@ node.default[:packages] = %w(
   automake
   libtool
   libsqlite3-dev
+  libpq-dev
 )
