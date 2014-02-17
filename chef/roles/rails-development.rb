@@ -11,5 +11,6 @@ run_list(
   "recipe[ruby_build]",
   "recipe[rbenv::system]",
   "recipe[rbenv::vagrant]",
+  "recipe[phantomjs]",
   "recipe[postinstall]"
 )
