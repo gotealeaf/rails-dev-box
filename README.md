@@ -23,23 +23,23 @@ user name: vagrant
 password: password
 ```
 
-You can get more usage of Vagrant in [here](http://vagrantup.com/).
+You can get more usage details for Vagrant [here](http://vagrantup.com/).
 
 ## Notice:
 
-If you use this project, it does not provide `Graphical User Interface` at this time. So debugging feature specs, you need to do some extra steps.
+If you use this project, it does not provide a `Graphical User Interface` at this time. So when you are debugging feature specs, you need to do some extra steps.
 
-There are two different chooses for you.
+There are two different choices for you.
 
-#### One Choose: Using Headless Browser
+#### One Choice: Use a Headless Browser
 
-This is the common way that how we run test suite.
+This is the method that we prefer.
 
 * Install & Initialization
 
-Using headless browser to debug, first you need to install [PhantomJS](http://phantomjs.org). We have integrated it in this project, so you don't need to install it here, but you need to know what we use.
+Before you can use a headless browser to debug, you need to install [PhantomJS](http://phantomjs.org). We have integrated it in this project, so you don't need to install it here, but you need to know what we use.
 
-Now in your Rails app, you need follow the steps below.
+Now in your Rails app, you need to follow the steps below.
 
 First, edit your `Gemfile`
 
@@ -63,7 +63,7 @@ Capybara.javascript_driver = :poltergeist
 
 It will not change the way that you run `rspec`, the command is still `rspec spec/feature/user_register_spec.rb`
 
-But, when you want to do something like `save_and_open_page` to see what the page looks like, you need to use `save_screenshot`
+But, when you want to do something like `save_and_open_page` to see what the page looks like, you need to use `save_screenshot`.
 
 For example:
 
@@ -73,7 +73,7 @@ scenario "with valid user info and valid card" do
   fill_in_valid_card
   click_button "Sign Up"
 
-  save_screenshot('tmp/file.png') # add it.
+  save_screenshot('tmp/file.png') # Add this.
 
   expect(page).to have_content("Thank you for registering with MyFlix. Please sign in now.")
 end
@@ -81,23 +81,23 @@ end
 
 When you run rspec, poltergeist will take a screenshot for you, and save it in `tmp/` folder called `file.png`
 
-#### Another Choose: Install GUI
+#### Another Choice: Install a GUI
 
-This way could provide you GUI, so you can install web browsers and then you can use `selenium` to debug feature specs.
+After installing a GUI, you can install web browsers and then you can use `selenium` to debug feature specs.
 
-* One choose: install XFCE.
+* One choice: install XFCE.
 
-After you run the `vagrant up`, and enter the virtual box by `vagrant ssh`, you can install `xfce4` by using:
+After you run the `vagrant up` command, and enter the virtual box by typing `vagrant ssh`, you can install `xfce4` using:
 
 ```
 sudo apt-get install xfce4
 ```
 
-I recommand you to use [XFCE](http://xfce.org) instand of [Gnome](http://www.gnome.org), because XFCE is more lightweight.
+I recommend that you use [XFCE](http://xfce.org) instead of [Gnome](http://www.gnome.org), because XFCE is more lightweight.
 
-* Another choose: install Gnome.
+* Another choice: install Gnome.
 
-But if you really want to install `Gnome`, follow the steps below.
+If you really want to install `Gnome`, follow the steps below.
 
 ```
 sudo add-apt-repository ppa:gnome3-team/gnome3
