@@ -7,7 +7,7 @@ It is based on Ubuntu 13.04
 
 ```
 $ git clone git@github.com:gotealeaf/rails-dev-box.git
-$ cd chef-rails-dev-box
+$ cd rails-dev-box
 $ bundle install
 $ cd chef
 $ bundle exec librarian-chef install
