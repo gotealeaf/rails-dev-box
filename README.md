@@ -5,9 +5,9 @@ It is based on Ubuntu 13.04
 
 ## USAGE:
 
-Before you install the vagrant, you need to download and install [Vagrant](http://www.vagrantup.com/downloads.html) and [Virtualbox](https://www.virtualbox.org/wiki/Downloads).
+Before you install rails-starter-box, you need to download and install [Vagrant](http://www.vagrantup.com/downloads.html) and [Virtualbox](https://www.virtualbox.org/wiki/Downloads).
 
-*Warnning: Don't use `gem install vagrant`, this gem has been not updated.*
+*Warning: Don't use `gem install vagrant`, this gem has been not updated.*
 
 ```
 $ git clone git@github.com:gotealeaf/rails-dev-box.git
